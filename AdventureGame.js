@@ -22,6 +22,7 @@ let gold = 20;
 let currentLocation = "village";
 let gameRunning = true;
 let inventory = [];
+let _userName
 
 // Display welcome message and starting stats
 playerName = readline.question("Enter your player name: ");
@@ -29,3 +30,5 @@ console.log("Hello player " + playerName);
 console.log("Here are you starting stats:");
 console.log("  Health: " + health);
 console.log("  Gold amount: " + gold);
+
+
