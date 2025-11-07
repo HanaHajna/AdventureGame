@@ -113,6 +113,22 @@ while (gameRunning) {
     let choice = readline.question("\nEnter choice (number): ");
     let choiceNum = parseInt(choice);
 
+    // Validate input
+    try {
+      // check for NaN
+      if (isNaN(choiceNum)) {
+          throw "Invalid input! Please enter a number.";
+        }
+      // check for empty input
+      if (choice.trim() === "") {
+          throw "Input cannot be empty! Please enter a number.";
+        }
+    } catch (error) {
+      console.log("\n" + error);
+      continue;  // Skip to next iteration of the loop
+    }  
+      
+
     // Handle choices based on location
     if (currentLocation === "village") {
         if (choiceNum === 1) {

@@ -1,5 +1,11 @@
-let y = 5;
-while (y < 10) {
-    y += 2;
+
+try {
+  
+   if (isNaN(parseInt(userInput))) {
+       throw ("Please enter a valid number.");
+    }
+ 
 }
-console.log("Final value of y: " + y);
+catch (error) {
+console.log("\n" + error);
+}
